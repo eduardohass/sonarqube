@@ -5,7 +5,7 @@ Foi configurado para que a ferramenta Terraform faça a criação do servidor qu
 
 
 Usado para autenticar no Google Storage.
-export GOOGLE_APPLICATION_CREDENTIALS=/home/hass/Documents/keys/gcp/om30/devops-340214-0a05fdbf885d.json
+export GOOGLE_APPLICATION_CREDENTIALS=<PATH_TO_KEY_JSON>
 
 
 # Ansible
