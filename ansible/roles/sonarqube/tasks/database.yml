@@ -1,0 +1,11 @@
+---
+  - name: Copiar o arquivo de migração para dentro do servidor
+    ansible.builtin.copy:
+      src: ./files/sonar.tar.xz
+      dest: ./
+      
+  
+  - name: Extrair o arquivo de dump sonar.tgz into ./
+    ansible.builtin.unarchive:
+      src: ./sonar.tgz
+      dest: ./

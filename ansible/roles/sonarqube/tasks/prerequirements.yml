@@ -1,0 +1,23 @@
+---
+  - name: Add user {{ user }} to sudo
+    shell: usermod -aG sudo {{ user }}
+    
+  - name: Install required system packages
+    apt:
+      name: "{{ item }}"
+      install_recommends: yes
+      update_cache: yes
+      state: present
+    loop:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - python3-pip
+      - virtualenv
+      - python3-setuptools
+      - gnupg-agent
+      - aptitude
+
+  - name: Incremento de memória virtual
+    shell: sudo sysctl -w vm.max_map_count=262144

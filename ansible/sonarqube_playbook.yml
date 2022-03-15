@@ -1,0 +1,9 @@
+---
+- name: SonarQube
+  become: yes
+  gather_facts: no 
+  connection: local
+
+  hosts: sonarqube
+  roles:
+    - { role: sonarqube, tags: ["sonarqube-basics"]  }
